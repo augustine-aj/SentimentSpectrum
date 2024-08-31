@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis and Visualisation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+        .navigation-container {
+            margin-top: 20px;
+            text-align: center; /* Center the button horizontally */
+        }
+
+        .navigation-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .about {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff; /* White background for readability */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            font-family: Arial, sans-serif; /* Font family for consistency */
+            color: #333; /* Dark grey text color for better readability */
+        }
+
+        .about p {
+            margin-bottom: 15px; /* Space between paragraphs */
+            line-height: 1.6; /* Increase line height for readability */
+            font-size: 16px; /* Font size for clarity */
+        }
+
+        .about p:first-of-type {
+            font-weight: bold; /* Bold the first paragraph to highlight the introduction */
+        }
+
+        .about p:last-of-type {
+            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+        }
+
+        .about a {
+            color: #007bff; /* Link color to match the theme */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .about a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .explanation {
+            text-align: center;
+            font-family: Arial, sans-serif;        
+            margin: 20px;
+            padding: 10px;              
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+        }
+        .explanation-text {
+            flex: 2;
+            padding-right: 20px; /* Adjust padding as needed */
+        }
+        .explanation h3{
+            color: #600662;
+        }
+        .explanation p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .explanation-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .explanation-list li {
+            font-size: 16px;
+            color: #333;
+        }                                                                                                                                                  
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .image-container {
+            max-width: 100%;
+            height: 100%;
+            flex: 1;
+            gap: 10px;
+            justify-items: center;
+            margin: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: 100%;               
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition effect */
+            transform-origin: right;
+        }
+        .image-container:hover img {
+            transform: scale(1.50); /* Slightly enlarge the image on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+        }
+        .caption {
+            margin-top: 5px;                   
+            font-size: 14px;
+            color: #555;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px;
+        }
+        .controls label {
+            margin: 0 10px;
+        }
+        .feature-image-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            flex-wrap: wrap; /* Allow wrapping to new rows if needed */
+            gap: 10px; /* Space between images */
+        }
+
+        .feature-image-container div {
+            flex: 1; /* Flex items grow equally */
+            max-width: calc(33% - 20px); /* Adjust width for 3 images per row, accounting for gaps */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            text-align: -webkit-center; /* Center-align the content inside the div */
+        }
+
+        .feature-image-container img {
+            width: 100%; /* Ensure images fit within their container */
+            height: auto;
+        }
+
+        .feature-caption {
+            font-style: italic;
+            font-size: 16px; /* Increase font size of captions */
+            text-align: center; /* Center-align the caption text */
+            margin-top: 5px; /* Space between image and caption */
+        }
+
+        .visualization-paragraph {
+            margin-top: 20px; /* Space above the paragraph */
+            font-size: 16px; /* Adjust font size if needed */
+            color: #1404fa; /* Adjust font color */
+            text-align: center; /* Center-align the paragraph text */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Analysis and Visualisation</h1>
+    <div class="navigation-container">
+        <a href="/geographical_visualisation">
+            <button type="button">Go to Geographical Visualisation</button>
+        </a>
+    </div>
+
+    <div class="about">
+        <p>Welcome to the Product Feature Visualization page. This platform offers an in-depth look at our product’s features through advanced visualizations. Utilizing powerful libraries such as Matplotlib and Seaborn, we have crafted detailed charts and graphs to provide you with comprehensive insights.</p>
+        <p>Matplotlib, a fundamental plotting library in Python, allows us to create a variety of static, interactive, and animated visualizations. It provides the backbone for our charts, ensuring they are both clear and informative. Seaborn, built on top of Matplotlib, enhances our visualizations with its high-level interface for drawing attractive and informative statistical graphics. Its advanced features help in revealing patterns and trends in the data, making our visualizations not only functional but also aesthetically pleasing.</p>
+        <p>Each visualization on this page represents different aspects of our product, from user sentiment and feature performance to overall ratings. These charts are based on extensive data analysis and provide valuable insights into user experiences and product strengths. Explore the graphs to understand how users perceive various features and how they contribute to the overall product experience.</p>
+    </div>    
+
+    <h2 style="color: #2c3e50;">Product Review Analysis</h2>
+    <hr style="border: 1px solid #ecc128; margin-bottom: 20px;">
+    <h3>Brand : {{star_counts['Brand']}}</h3>
+    <h3>Model : {{star_counts['Model']}}</h3>
+    <h3>Source Link : {{star_counts['Link']}}</h3>
+    <div id="sentiment-distribution-explanations" class="explanation">
+        <div class="explanation-text">
+            <h3>Sentiment Distribution - Bar Plot</h3>
+            <p>This bar plot provides a clear overview of the sentiment distribution across all reviews. It categorizes the reviews into Positive, Neutral, and Negative sentiments, offering insights into the overall mood of the customers.</p>
+            <ul class="explanation-list">
+                <li><strong>Positive:</strong> {{ star_counts['Positive'] }}<br>
+                    This count reflects the number of reviews with a positive sentiment, indicating customer satisfaction and approval.</li>
+                <li><strong>Neutral:</strong> {{ star_counts['Neutral'] }}<br>
+                    These reviews are neutral, showing that customers had a balanced or indifferent experience.</li>
+                <li><strong>Negative:</strong> {{ star_counts['Negative'] }}<br>
+                    The number of reviews with a negative sentiment, highlighting areas where customers encountered dissatisfaction.</li>
+            </ul>
+            <p>Understanding sentiment distribution helps in assessing customer satisfaction levels and identifying areas for improvement.</p>
+        </div>
+    
+        <div class="image-container">
+            <img src="/Overall Review/sentiment_distribution.png" alt="Sentiment Distribution Bar Plot" />
+            <div class="caption">Sentiment Distribution - Bar Plot</div>
+        </div>
+    </div>
+
+    <div id="reviews-over-time-explanations" class="explanation">
+        <div class="explanation-text">
+            <h3>Reviews Over Time - Histogram</h3>
+            <p>This histogram tracks the number of reviews submitted over time, offering insights into the trends and patterns in customer engagement across different months.</p>
+            <ul class="explanation-list">
+                <li><strong>Peak Month for Reviews:</strong> {{ star_counts['Review_Date'] }}<br>
+                    This month saw the highest number of reviews, with a total of {{ star_counts['Review_Count'] }} reviews. This peak could indicate a period of high customer interest or a significant event related to the product.</li>
+            </ul>
+            <p>Analyzing review trends over time can help in understanding how customer interest fluctuates and in identifying key periods of engagement.</p>
+        </div>
+    
+        <div class="image-container">
+            <img src="/Overall Review/reviews_over_time.png" alt="Reviews Over Time Histogram" />
+            <div class="caption">Reviews Over Time - Histogram</div>
+        </div>
+    </div>
+    
+    <div id="sentiment-distribution-over-time-explanations" class="explanation">
+        <div class="explanation-text">
+            <h3>Sentiment Distribution Over Time - Stacked Histogram</h3>
+            <p>The stacked histogram provides a month-by-month breakdown of sentiment distribution in the reviews, allowing you to see how customer sentiment has evolved over time.</p>
+            <ul class="explanation-list">
+                <li><strong>Positive Sentiments:</strong> Tracks the number of positive reviews each month.</li>
+                <li><strong>Neutral Sentiments:</strong> Shows how many reviews had a neutral sentiment over time.</li>
+                <li><strong>Negative Sentiments:</strong> Indicates the count of negative reviews for each month.</li>
+            </ul>
+            <p>This visualization is valuable for identifying trends in customer sentiment, helping businesses adjust their strategies based on changing customer feedback.</p>
+        </div>
+    
+        <div class="image-container">
+            <img src="/Overall Review/sentiment_distribution_over_time.png" alt="Sentiment Distribution Over Time Stacked Histogram" />
+            <div class="caption">Sentiment Distribution Over Time - Stacked Histogram</div>
+        </div>
+    </div>
+    
+    <div id="rating-explanations" class="explanation" >
+        <div class="explanation-text">
+            <h3>Distribution of Ratings - Bar Plot</h3>
+            <p>This bar plot showcases the distribution of star ratings across all customer reviews. It provides a clear visual representation of how customers rate the product, highlighting the overall sentiment and satisfaction levels.</p>
+            <ul class="explanation-list" >
+                <li><strong>5 Stars:</strong> {{ star_counts['5 Stars'] }} reviews indicate that a majority of customers are highly satisfied with the product.</li>
+                <li><strong>4 Stars:</strong> {{ star_counts['4 Stars'] }} reviews suggest that many customers found the product favorable, with minor reservations.</li>
+                <li><strong>3 Stars:</strong> {{ star_counts['3 Stars'] }} reviews reflect a balanced mix of positive and negative experiences.</li>
+                <li><strong>2 Stars:</strong> {{ star_counts['2 Stars'] }} reviews point towards noticeable dissatisfaction among some customers.</li>
+                <li><strong>1 Star:</strong> {{ star_counts['1 Star'] }} reviews highlight significant issues faced by the customers, necessitating a closer look into the feedback.</li>
+            </ul>
+            <p>This bar plot displays the distribution of ratings across products, highlighting how frequently each rating score is given by users.</p>
+            <p>The counts for each rating are as follows:</p>
+            <p><span class="highlight">5 Stars:</span> {{ star_counts['5 Stars'] }},
+                <span class="highlight">4 Stars:</span> {{ star_counts['4 Stars'] }},
+                <span class="highlight">3 Stars:</span> {{ star_counts['3 Stars'] }},
+                <span class="highlight">2 Stars:</span> {{ star_counts['2 Stars'] }},
+                <span class="highlight">1 Star:</span> {{ star_counts['1 Star'] }}.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="/Review Details/bar_chart_ratings.png" alt="Ratings Distribution Bar Chart"/>
+            <div class="caption">Distribution of Ratings - Bar Plot</div>
+        </div>
+    </div>
+
+    <div id="rating-explanations" class="explanation">
+        <div class="explanation-text">
+            <h3>Proportion of Total Rating and Total Review - Pie Chart</h3>
+            <p>This pie chart provides a visual summary of customer engagement across various products, showing which products attract the most attention and how feedback is distributed.</p>
+            <ul class="explanation-list">
+                <li><strong>Total Rating:</strong> {{ star_counts['Total_rating'] }}<br>
+                    This figure represents the total number of ratings across all products. A higher count suggests greater customer engagement and a more reliable average rating, reflecting overall sentiment.</li>
+                <li><strong>Total Review:</strong> {{ star_counts['Total_Review'] }}<br>
+                    This number reflects the total written reviews. Reviews provide detailed feedback, offering deeper insights into customer experiences and the product's impact on the market.</li>
+            </ul>
+            <p>Analyzing these metrics helps businesses understand customer engagement and identify areas for improvement, ensuring that feedback is used to enhance product quality and customer satisfaction.</p>
+        </div>
+    
+        <div class="image-container">
+            <img src="/Review Details/pie_chart.png" alt="Proportion of Total Rating and Total Review - Pie Chart"/>
+            <div class="caption">Proportion of Total Rating and Total Review - Pie Chart</div>
+        </div>
+    </div>
+
+    <div id="pricing-explanations" class="explanation">
+        <div class="explanation-text">
+            <h3>Comparison of Discount Price and Actual Price - Bar Plot</h3>
+            <p>This bar plot provides a clear visual comparison between the discount price and the actual price of products. It highlights the extent of discounts offered, allowing customers and businesses to gauge the savings available on various products.</p>
+            <p>The chart helps in understanding the pricing strategy, showcasing how much a product's price is reduced from its original cost and the overall value proposition for customers.</p>
+            <ul class="explanation-list">
+                <li><strong>Discount Price:</strong> {{ star_counts['Discount_Price'] }}<br>
+                    The reduced price customers pay after discounts are applied.</li>
+                <li><strong>Actual Price:</strong> {{ star_counts['Actual_Price'] }}<br>
+                    The original price before discounts.</li>
+                <li><strong>Discount Amount:</strong> {{ star_counts['Discount'] }}<br>
+                    The difference between the actual and discount prices, indicating the level of savings.</li>
+            </ul>
+            <p>Overall, this bar plot allows businesses to analyze their discount strategies, ensuring they are competitive and appealing to customers, while also giving customers a clear view of their potential savings.</p>
+        </div>
+    
+        <div class="image-container">
+            <img src="/Review Details/bar_plot.png" alt="Comparison of Discount Price and Actual Price - Bar Plot"/>
+            <div class="caption">Comparison of Discount Price and Actual Price - Bar Plot</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button onclick="updateVisualizations('battery')">Battery</button>
+        <button onclick="updateVisualizations('camera')">Camera</button>
+        <button onclick="updateVisualizations('display')">Display</button>
+        <button onclick="updateVisualizations('performance')">Performance</button>
+    </div>
+
+    <div id="feature-sections">
+        <!-- Dynamic sections for each feature will be populated here -->
+    </div>
+
+    <script>
+        function updateVisualizations(feature) {
+            console.log(`Updating visualizations for: ${feature}`); // Debugging line
+
+            // Get the container for feature sections
+            const container = document.getElementById('feature-sections');
+
+            // Clear the container to refresh with new content
+            container.innerHTML = '';
+
+            // Create a new explanation div for the selected feature
+            const explanationDiv = document.createElement('div');
+            explanationDiv.className = 'visualization-paragraph';
+            explanationDiv.id = `${feature}-explanation`;
+
+            const explanations = {
+                'battery': 'Battery performance data and analysis.',
+                'camera': 'Camera quality and user feedback.',
+                'display': 'Display features and user satisfaction.',
+                'performance': 'Overall performance metrics and feedback.'
+            };
+
+            const explanationParagraph = document.createElement('p');
+            explanationParagraph.textContent = explanations[feature] || 'No explanation available.';
+            explanationDiv.appendChild(explanationParagraph);
+
+            container.appendChild(explanationDiv);
+
+            // Create a new image container for the selected feature
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'feature-image-container'; // Updated class name
+
+            const featureImages = {
+                'battery': [
+                    { src: 'Battery_rating_donut_chart.png', alt: 'Battery Rating Donut Chart', caption: 'Battery Rating Donut Chart' },
+                    { src: 'Battery_reviews_over_time.png', alt: 'Battery Reviews Over Time', caption: 'Battery Reviews Over Time' },
+                    { src: 'Battery_sentiment_distribution.png', alt: 'Battery Sentiment Distribution', caption: 'Battery Sentiment Distribution' }
+                ],
+                'camera': [
+                    { src: 'Camera_rating_donut_chart.png', alt: 'Camera Rating Donut Chart', caption: 'Camera Rating Donut Chart' },
+                    { src: 'Camera_reviews_over_time.png', alt: 'Camera Reviews Over Time', caption: 'Camera Reviews Over Time' },
+                    { src: 'Camera_sentiment_distribution.png', alt: 'Camera Sentiment Distribution', caption: 'Camera Sentiment Distribution' }
+                ],
+                'display': [
+                    { src: 'Display_rating_donut_chart.png', alt: 'Display Rating Donut Chart', caption: 'Display Rating Donut Chart' },
+                    { src: 'Display_reviews_over_time.png', alt: 'Display Reviews Over Time', caption: 'Display Reviews Over Time' },
+                    { src: 'Display_sentiment_distribution.png', alt: 'Display Sentiment Distribution', caption: 'Display Sentiment Distribution' }
+                ],
+                'performance': [
+                    { src: 'Performance_rating_donut_chart.png', alt: 'Performance Rating Donut Chart', caption: 'Performance Rating Donut Chart' },
+                    { src: 'Performance_reviews_over_time.png', alt: 'Performance Reviews Over Time', caption: 'Performance Reviews Over Time' },
+                    { src: 'Performance_sentiment_distribution.png', alt: 'Performance Sentiment Distribution', caption: 'Performance Sentiment Distribution' }
+                ]
+            };
+
+            // Append images and captions for the selected feature
+            featureImages[feature].forEach(imgData => {
+                const imgElement = document.createElement('img');
+                imgElement.src = `/${imgData.src}`;
+                imgElement.alt = imgData.alt;
+
+                const captionElement = document.createElement('div');
+                captionElement.className = 'feature-caption'; // Updated class name
+                captionElement.textContent = imgData.caption;
+
+                const divElement = document.createElement('div');
+                divElement.appendChild(imgElement);
+                divElement.appendChild(captionElement);
+
+                imageContainer.appendChild(divElement);
+            });
+
+            // Add the image container to the feature sections container
+            container.appendChild(imageContainer);
+
+            // Add a paragraph related to the visualizations
+            const visualizationParagraph = document.createElement('p');
+            visualizationParagraph.className = 'visualization-paragraph';
+
+            const paragraphs = {
+                'battery': 'This section provides insights into battery performance metrics, including user ratings, reviews over time, and sentiment distribution related to battery life.',
+                'camera': 'Here, you can explore data on camera quality, including user feedback, performance ratings, and visual representations of camera-related metrics.',
+                'display': 'This section highlights various aspects of display performance, such as user satisfaction, display ratings, and reviews over time.',
+                'performance': 'Explore overall performance metrics, user feedback, and visualizations of performance-related data.'
+            };
+
+            visualizationParagraph.textContent = paragraphs[feature] || 'No additional information available.';
+            container.appendChild(visualizationParagraph);
+        }
+
+    </script>
+
+    <div id="all-explanations" class="explanation">
+        <div style="font-family: Arial, sans-serif; margin: 20px;">
+            <h3 style="color: #2980b9;">Key Insights & Recommendations:</h3>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li><strong>High Satisfaction Rate:</strong> The product has garnered a significant number of 5-star reviews, underscoring its high quality and customer satisfaction. This positive trend can be leveraged in marketing campaigns to attract more customers.</li>
+                <li><strong>Areas for Improvement:</strong> The presence of 1-star and 2-star reviews indicates specific areas that may require improvement. Analyzing these reviews could uncover recurring issues such as product defects, customer service problems, or unmet expectations.</li>
+                <li><strong>Balanced Sentiment:</strong> The distribution of Neutral reviews suggests that some customers had a mixed experience. Gathering more feedback from this group could provide valuable insights into how to convert neutral experiences into positive ones.</li>
+                <li><strong>Impact of Pricing:</strong> The analysis of <em>Discount Price</em> vs. <em>Actual Price</em> reveals how pricing strategies influence customer satisfaction. A well-communicated discount can significantly enhance the perceived value of the product, leading to more positive reviews.</li>
+                <li><strong>Review Volume & Trends:</strong> Monitoring the <em>Total Reviews</em> over time can reveal trends that align with product launches, updates, or promotional activities. An increasing number of reviews, especially positive ones, can indicate growing popularity and customer approval.</li>
+            </ul>
+
+            <h3 style="color: #2980b9;">Conclusion:</h3>
+            <p>This analysis provides a comprehensive view of customer sentiment and product performance through both star ratings and sentiment distribution. The data highlights the product's strengths while also pointing out areas for potential improvement. By addressing the concerns raised in negative reviews and leveraging the positive feedback, the product can be further refined to meet and exceed customer expectations.</p>
+
+            <h3 style="color: #2980b9;">Actionable Steps:</h3>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li><strong>Focus on Enhancing Strengths:</strong> Emphasize the aspects that customers love in future product descriptions and advertisements.</li>
+                <li><strong>Address Negative Feedback:</strong> Analyze 1-star and 2-star reviews to identify common issues, and take steps to resolve them.</li>
+                <li><strong>Engage with Neutral Customers:</strong> Offer incentives or gather more feedback from customers with neutral reviews to convert their experience into a positive one.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

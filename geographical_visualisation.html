@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Reviewer Location Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Leaflet Heatmap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.heat/dist/leaflet-heat.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            border-left: 5px solid #3498db;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .key-points {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-points li {
+            margin-bottom: 10px;
+        }
+        h2, h3 {
+            color: #444;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #map, #feature-map {
+            height: 500px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #analysis-report, #feature-analysis {
+            width: 80%;
+            max-width: 900px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .report-section {
+            margin-bottom: 20px;
+        }
+        .report-section h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .sentiment-color {
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .positive {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+        .negative {
+            background-color: #dc3545; /* Red */
+            color: white;
+        }
+        .neutral {
+            background-color: #ffc107; /* Orange */
+            color: black;
+        }
+        .legend-control {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            z-index: 1000; /* Ensure it's above other elements */
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .legend-color.positive {
+            background-color: #28a745; /* Green */
+        }
+        .legend-color.neutral {
+            background-color: #ffc107; /* Orange */
+        }
+        .legend-color.negative {
+            background-color: #dc3545; /* Red */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <h1>About This Visualization</h1>
+
+        <p>This page provides a dynamic visualization of reviewer data, focusing on sentiment distribution and feature-specific analysis. The visualizations are created using Leaflet, an open-source JavaScript library for interactive maps, and various heatmap layers to represent data density and sentiment analysis.</p>
+
+        <div class="highlight">
+            <h2>Sentiment Distribution</h2>
+            <p>The main map displays review locations with markers colored according to sentiment. This allows for an intuitive understanding of sentiment distribution across different regions. Positive, negative, and neutral sentiments are represented using distinct colors, helping users quickly identify areas with predominant sentiments.</p>
+        </div>
+
+        <div class="highlight">
+            <h2>Feature-Specific Heatmaps</h2>
+            <p>Users can also view heatmaps for specific features such as camera, battery, performance, and display. These heatmaps provide a visual representation of review concentrations related to each feature, aiding in the analysis of feature-specific sentiments and identifying trends or issues.</p>
+        </div>
+
+        <h2>Importance of Visualizations in Data Science</h2>
+        <p>Data visualization is a crucial aspect of data science, offering several benefits:</p>
+        <ul class="key-points">
+            <li><b>Enhanced Understanding:</b> Visualizations make complex data more comprehensible by translating numerical data into graphical formats that highlight patterns and trends.</li>
+            <li><b>Quick Insights:</b> Interactive maps and heatmaps provide immediate insights into data distributions and correlations, facilitating faster decision-making.</li>
+            <li><b>Effective Communication:</b> Well-designed visualizations help communicate findings to stakeholders or audiences who may not be familiar with technical details.</li>
+            <li><b>Pattern Recognition:</b> Visualizing data helps in recognizing patterns or anomalies that may not be apparent from raw data alone.</li>
+        </ul>
+
+        <p>Overall, integrating visualizations into data analysis enhances the ability to interpret, understand, and act on data-driven insights effectively.</p>
+    </div>
+
+<div id="container">
+    <h2>Reviewer Locations</h2>
+    <div class="button-container">
+        <button class="btn" onclick="fetchAndUpdateMap()">Sentiment Distribution</button>
+        <button class="btn" onclick="locationOnly()">Location Only</button>
+        <button onclick="fetchAndUpdateMap()">Street Map view</button>
+        <button onclick="showHeatmap()">Show Heatmap</button> <!-- Button to show heatmap -->
+    </div>
+    <div id="map"></div>
+
+    <div id="analysis-report">
+        <!-- Main analysis report will be displayed here -->
+    </div>
+
+    <div id="feature-buttons">
+        <button onclick="fetchFeatureData('camera')">Camera</button>
+        <button onclick="fetchFeatureData('battery')">Battery</button>
+        <button onclick="fetchFeatureData('display')">Display</button>
+        <button onclick="fetchFeatureData('performance')">Performance</button>
+        <button onclick="showFeatureHeatmap()">Show Heatmap</button>
+    </div>
+
+    <div id="feature-map"></div>
+    <div id="feature-analysis-report">
+        <!-- Feature-specific analysis report will be displayed here -->
+    </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<!-- Leaflet Heatmap JS -->
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+<script>
+// Initialize the maps
+var map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
+var featureMap = L.map('feature-map').setView([20.5937, 78.9629], 5); // Centered on India
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+}).addTo(map);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+}).addTo(featureMap);
+var heatmapLayer;
+var featureHeatmapLayer = null;
+let heatmapFeature= null;
+
+// Function to fetch reviewer data and update the main map
+function fetchAndUpdateMap() {
+    console.log('Fetching reviewer data...');
+    fetch('/api/geodata')
+        .then(response => {
+            if (!response.ok) {
+                console.log('error occurred, ', response)
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data fetched:', data);
+            updateMap(data);
+            generateAnalysisReport(data);
+        })
+        .catch(error => {
+            console.error('Error fetching reviewer data:', error);
+            alert('Failed to fetch reviewer data. Check console for details.');
+        });
+}
+
+function locationOnly() {
+    console.log('Fetching reviewer data...');
+    fetch('/api/geodata')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data fetched:', data);
+            updateLocationMap(data);
+            generateAnalysisReport(data);
+        })
+        .catch(error => {
+            console.error('Error fetching reviewer data:', error);
+            alert('Failed to fetch reviewer data. Check console for details.');
+        });
+}
+
+function fetchFeatureData(feature) {
+    console.log("Removing heatmap layer...");
+    if (featureHeatmapLayer) {
+        console.log('Heatmap layer exists:', featureHeatmapLayer);
+        featureMap.removeLayer(featureHeatmapLayer);
+        featureHeatmapLayer = null;
+        console.log("Removed heatmap layer...");
+    } else {
+        console.log('No heatmap layer to remove.');
+    }
+
+    console.log(`Fetching ${feature} data...`);
+    heatmapFeature = feature;
+    fetch(`/api/geodata?feature=${encodeURIComponent(feature)}`)
+        .then(response => {
+            console.log('Response:', response);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(`Data for ${feature} fetched:`, data);
+            updateFeatureMap(data);
+            generateFeatureAnalysisReport(data);
+        })
+        .catch(error => {
+            console.error(`Error fetching ${feature} data:`, error);
+            alert(`Failed to fetch ${feature} data. Check console for details.`);
+        });
+}
+
+function showHeatmap() {
+        console.log('Fetching data for heatmap...');
+        fetch('/api/geodata')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data fetched for heatmap:', data);
+                updateHeatmap(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data for heatmap:', error);
+                alert('Failed to fetch data for heatmap. Check console for details.');
+            });
+    }
+function updateHeatmap(data) {
+    // Remove existing heatmap layer if it exists
+    if (heatmapLayer) {
+        map.removeLayer(heatmapLayer);
+    }
+
+    // Remove any existing markers
+    map.eachLayer(function(layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+    var heatmapData = data.map(reviewer => [reviewer.Latitude, reviewer.Longitude]);
+
+    // Create a new heatmap layer with the defined gradient
+    heatmapLayer = L.heatLayer(heatmapData, { radius: 35, gradient: {
+            1: 'rgba(255, 0, 0, 1)'
+        } }).addTo(map);
+}
+
+function showFeatureHeatmap() {
+        console.log('Fetching data for feature heatmap...', heatmapFeature);
+        fetch(`/api/geodata?feature=${encodeURIComponent(heatmapFeature)}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data fetched for feature heatmap:', data);
+                updateFeatureHeatmap(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data for feature heatmap:', error);
+                alert('Failed to fetch data for feature heatmap. Check console for details.');
+            });
+    }
+function updateFeatureHeatmap(data) {
+    // Remove existing heatmap layer if it exists
+    if (featureHeatmapLayer) {
+        featureMap.removeLayer(featureHeatmapLayer);
+        featureHeatmapLayer = null;
+    }
+
+    // Remove any existing markers
+    featureMap.eachLayer(function(layer) {
+        if (layer instanceof L.Marker) {
+            featureMap.removeLayer(layer);
+        }
+    });
+
+    // Assuming `data` is an array of reviewers
+    var featureHeatmapData = data.map(reviewer => [reviewer.Latitude, reviewer.Longitude]);
+
+    // Create a new heatmap layer with the defined gradient
+    featureHeatmapLayer = L.heatLayer(featureHeatmapData, {
+        radius: 35,
+        gradient: {
+            1: 'rgba(255, 0, 0, 1)'
+        }
+    }).addTo(featureMap);
+}
+
+
+// Function to create a custom icon based on sentiment
+function getMarkerIcon(sentiment) {
+    var color;
+
+    switch (sentiment.toLowerCase()) {
+        case 'positive':
+            color = '#28a745'; // Green
+            break;
+        case 'negative':
+            color = '#dc3545'; // Red
+            break;
+        case 'neutral':
+            color = '#ffc107'; // Orange
+            break;
+        default:
+            color = '#6c757d'; // Default color
+    }
+
+    return L.divIcon({
+        className: 'custom-marker',
+        html: `<div style="background-color: ${color}; border-radius: 50%; width: 24px; height: 24px; line-height: 24px; text-align: center; color: white;">!</div>`,
+        iconSize: [24, 24],
+        iconAnchor: [12, 24]
+    });
+}
+
+// Variable to hold the reference to the current legend
+var currentLegend = null;
+
+// Function to add or update the legend on the map
+function addLegend(map) {
+    // Remove the existing legend if it exists
+    if (currentLegend !== null) {
+        map.removeControl(currentLegend);
+    }
+
+    // Create a new legend control
+    currentLegend = L.control({position: 'topright'});
+
+    currentLegend.onAdd = function () {
+        var div = L.DomUtil.create('div', 'legend-control');
+        div.innerHTML = `
+            <div class="legend-item">
+                <div class="legend-color positive"></div><span>Positive</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color neutral"></div><span>Neutral</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color negative"></div><span>Negative</span>
+            </div>
+        `;
+        return div;
+    };
+
+    // Add the new legend to the map
+    currentLegend.addTo(map);
+}
+
+// Function to update the main map with reviewer locations
+function updateMap(data) {
+    if (heatmapLayer) {
+    map.removeLayer(heatmapLayer);
+    }
+    // Clear existing markers
+    map.eachLayer(function(layer){
+        if(layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+
+    var locationMap = {};
+
+    // Add markers for each reviewer location
+    data.forEach(function(reviewer) {
+        const lat = reviewer.Latitude;
+        const lng = reviewer.Longitude;
+        const names = reviewer.Reviewer_Name;
+        const location_name = reviewer.Reviewer_Location;
+        const sentiment = reviewer.Sentiment;
+
+        if (lat !== null && lng !== null) {
+            var key = `${lat},${lng}`;
+            locationMap[key] = (locationMap[key] || 0) + 1;
+
+            const offset = 0.01;
+            const indexForOffset = locationMap[key] - 1;
+            const row = Math.floor(indexForOffset / 10);
+            const col = indexForOffset % 10;
+
+            const markerLat = lat + row * offset;
+            const markerLng = lng + col * offset;
+
+            L.marker([markerLat, markerLng], {
+                icon: getMarkerIcon(sentiment)
+            }).addTo(map)
+            .bindPopup(`<strong>${names}</strong><br>${location_name}<br>${sentiment}`);
+        }
+    });
+
+    // Add legend to the map
+    addLegend(map);
+}
+
+function updateLocationMap(data) {
+    if (heatmapLayer) {
+        map.removeLayer(heatmapLayer);
+    }
+    // Clear existing markers
+    map.eachLayer(function(layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+
+    var locationMap = {};
+
+    // Define a default blue marker icon
+    function getDefaultBlueMarkerIcon() {
+        return L.icon({
+            iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Default Leaflet marker icon
+            iconSize: [25, 41], // Size of the icon
+            iconAnchor: [12, 41], // Anchor point of the icon (bottom center)
+            popupAnchor: [1, -34] // Popup anchor position
+        });
+    }
+
+    // Add markers for each reviewer location
+    data.forEach(function(reviewer) {
+        const lat = reviewer.Latitude;
+        const lng = reviewer.Longitude;
+        const names = reviewer.Reviewer_Name;
+        const location_name = reviewer.Reviewer_Location;
+
+        if (lat !== null && lng !== null) {
+            var key = `${lat},${lng}`;
+            locationMap[key] = (locationMap[key] || 0) + 1;
+
+            const offset = 0.01;
+            const indexForOffset = locationMap[key] - 1;
+            const row = Math.floor(indexForOffset / 10);
+            const col = indexForOffset % 10;
+
+            const markerLat = lat + row * offset;
+            const markerLng = lng + col * offset;
+
+            L.marker([markerLat, markerLng], {
+                icon: getDefaultBlueMarkerIcon()
+            }).addTo(map)
+            .bindPopup(`<strong>${names}</strong><br>${location_name}`);
+        }
+    });
+
+    // Remove legend if present
+    if (currentLegend) {
+        map.removeControl(currentLegend);
+        currentLegend = null;
+    }
+}
+
+
+
+
+// Function to update the feature map with feature-specific data
+function updateFeatureMap(data) {
+    console.log("Removing heatmap layer...");
+    if (featureHeatmapLayer) {
+        map.removeLayer(featureHeatmapLayer);
+        featureHeatmapLayer = null;
+        console.log("Removed heatmap layer...");
+    }
+    // Clear existing markers
+    featureMap.eachLayer(function(layer){
+        if(layer instanceof L.Marker) {
+            featureMap.removeLayer(layer);
+        }
+    });
+
+    var locationMap = {};
+
+    // Add markers for each reviewer location
+    data.forEach(function(reviewer) {
+        const lat = reviewer.Latitude;
+        const lng = reviewer.Longitude;
+        const names = reviewer.Reviewer_Name;
+        const location_name = reviewer.Reviewer_Location;
+        const sentiment = reviewer.Sentiment;
+
+        if (lat !== null && lng !== null) {
+            var key = `${lat},${lng}`;
+            locationMap[key] = (locationMap[key] || 0) + 1;
+
+            const offset = 0.01;
+            const indexForOffset = locationMap[key] - 1;
+            const row = Math.floor(indexForOffset / 10);
+            const col = indexForOffset % 10;
+
+            const markerLat = lat + row * offset;
+            const markerLng = lng + col * offset;
+
+            L.marker([markerLat, markerLng], {
+                icon: getMarkerIcon(sentiment)
+            }).addTo(featureMap)
+            .bindPopup(`<strong>${names}</strong><br>${location_name}<br>${sentiment}`);
+        }
+    });
+
+    // Add legend to the map
+    addLegend(featureMap);
+}
+
+// Function to generate the main analysis report
+function generateAnalysisReport(data) {
+    var reportDiv = document.getElementById('analysis-report');
+    reportDiv.innerHTML = '';
+
+    var locationMap = {};
+    var sentimentCounts = { positive: 0, negative: 0, neutral: 0 };
+    var locationCounts = {};
+
+    data.forEach(function(reviewer) {
+        const lat = reviewer.Latitude;
+        const lng = reviewer.Longitude;
+        const sentiment = reviewer.Sentiment.toLowerCase();
+        const locationName = reviewer.Reviewer_Location;
+
+        if (lat !== null && lng !== null) {
+            var key = `${lat},${lng}`;
+            locationMap[key] = locationMap[key] || { count: 0, sentiments: {} };
+            locationMap[key].count++;
+
+            locationMap[key].sentiments[sentiment] = (locationMap[key].sentiments[sentiment] || 0) + 1;
+            locationCounts[locationName] = (locationCounts[locationName] || 0) + 1;
+            sentimentCounts[sentiment]++;
+        }
+    });
+
+    var totalLocations = Object.keys(locationMap).length;
+    var totalReviews = data.length;
+    var uniqueLocations = Object.keys(locationCounts).length;
+
+    var positivePercentage = ((sentimentCounts.positive / totalReviews) * 100).toFixed(2);
+    var negativePercentage = ((sentimentCounts.negative / totalReviews) * 100).toFixed(2);
+    var neutralPercentage = ((sentimentCounts.neutral / totalReviews) * 100).toFixed(2);
+
+    var sortedLocations = Object.entries(locationCounts).sort((a, b) => b[1] - a[1]);
+    var topLocations = sortedLocations.slice(0, 5);
+    var leastCommonLocations = sortedLocations.slice(-5).reverse();
+
+    reportDiv.innerHTML += `
+        <div id="report">
+            <h2>Analysis Report</h2>
+            <p><strong>Date:</strong> <span id="report-date">${new Date().toLocaleDateString()}</span></p>
+            <h3>1. Overview of Data:</h3>
+            <p>Total Reviews: <span id="total-reviews">${totalReviews}</span></p>
+            <p>Unique Locations: <span id="unique-locations">${uniqueLocations}</span></p>
+            <p>Sentiments Tracked: Positive, Negative, Neutral</p>
+
+            <h3>2. Sentiment Analysis:</h3>
+            <p><strong>Overall Sentiment Distribution:</strong></p>
+            <ul>
+                <li class="sentiment-color positive">Positive: <span id="positive-percentage">${positivePercentage}%</span></li>
+                <li class="sentiment-color negative">Negative: <span id="negative-percentage">${negativePercentage}%</span></li>
+                <li class="sentiment-color neutral">Neutral: <span id="neutral-percentage">${neutralPercentage}%</span></li>
+            </ul>
+
+            <h3>3. Distribution of Reviewers by Location:</h3>
+            <p><strong>Top Locations with Highest Reviewer Count:</strong></p>
+            <ul id="top-locations">
+                ${topLocations.map(location => `<li>${location[0]} (${location[1]})</li>`).join('')}
+            </ul>
+            <p><strong>Locations with the Least Reviewer Count:</strong></p>
+            <ul id="least-common-locations">
+                ${leastCommonLocations.map(location => `<li>${location[0]} (${location[1]})</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+// Function to generate the feature-specific analysis report
+function generateFeatureAnalysisReport(data) {
+    var reportDiv = document.getElementById('feature-analysis-report');
+    reportDiv.innerHTML = '';
+
+    var locationMap = {};
+    var sentimentCounts = { positive: 0, negative: 0, neutral: 0 };
+    var locationCounts = {};
+
+    data.forEach(function(reviewer) {
+        const lat = reviewer.Latitude;
+        const lng = reviewer.Longitude;
+        const sentiment = reviewer.Sentiment.toLowerCase();
+        const locationName = reviewer.Reviewer_Location;
+
+        if (lat !== null && lng !== null) {
+            var key = `${lat},${lng}`;
+            locationMap[key] = locationMap[key] || { count: 0, sentiments: {} };
+            locationMap[key].count++;
+
+            locationMap[key].sentiments[sentiment] = (locationMap[key].sentiments[sentiment] || 0) + 1;
+            locationCounts[locationName] = (locationCounts[locationName] || 0) + 1;
+            sentimentCounts[sentiment]++;
+        }
+    });
+
+    var totalLocations = Object.keys(locationMap).length;
+    var totalReviews = data.length;
+    var uniqueLocations = Object.keys(locationCounts).length;
+
+    var positivePercentage = ((sentimentCounts.positive / totalReviews) * 100).toFixed(2);
+    var negativePercentage = ((sentimentCounts.negative / totalReviews) * 100).toFixed(2);
+    var neutralPercentage = ((sentimentCounts.neutral / totalReviews) * 100).toFixed(2);
+
+    var sortedLocations = Object.entries(locationCounts).sort((a, b) => b[1] - a[1]);
+    var topLocations = sortedLocations.slice(0, 5);
+    var leastCommonLocations = sortedLocations.slice(-5).reverse();
+
+    reportDiv.innerHTML += `
+        <div id="report">
+            <h2>Analysis Report</h2>
+            <p><strong>Date:</strong> <span id="report-date">${new Date().toLocaleDateString()}</span></p>
+            <h3>1. Overview of Data:</h3>
+            <p>Total Reviews: <span id="total-reviews">${totalReviews}</span></p>
+            <p>Unique Locations: <span id="unique-locations">${uniqueLocations}</span></p>
+            <p>Sentiments Tracked: Positive, Negative, Neutral</p>
+
+            <h3>2. Sentiment Analysis:</h3>
+            <p><strong>Overall Sentiment Distribution:</strong></p>
+            <ul>
+                <li class="sentiment-color positive">Positive: <span id="positive-percentage">${positivePercentage}%</span></li>
+                <li class="sentiment-color negative">Negative: <span id="negative-percentage">${negativePercentage}%</span></li>
+                <li class="sentiment-color neutral">Neutral: <span id="neutral-percentage">${neutralPercentage}%</span></li>
+            </ul>
+
+            <h3>3. Distribution of Reviewers by Location:</h3>
+            <p><strong>Top Locations with Highest Reviewer Count:</strong></p>
+            <ul id="top-locations">
+                ${topLocations.map(location => `<li>${location[0]} (${location[1]})</li>`).join('')}
+            </ul>
+            <p><strong>Locations with the Least Reviewer Count:</strong></p>
+            <ul id="least-common-locations">
+                ${leastCommonLocations.map(location => `<li>${location[0]} (${location[1]})</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+// Fetch and update maps initially
+fetchAndUpdateMap();
+</script>
+</body>
+</html>

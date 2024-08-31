@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Reader and Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #csv-viewer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        .data {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 14px;
+            color: #555;
+            background-color: #f4f4f4; /* Light background color */
+        }
+        .data th, .data td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .data th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        .data tr:nth-child(even) {
+            background-color: #e9ecef; /* Light row background color */
+        }
+        .data tr:hover {
+            background-color: #d6e9f5; /* Slightly darker hover color */
+        }
+    </style>
+    <script>
+        function viewCSV(filename) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `/view/${filename}`, true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById("csv-viewer").innerHTML = xhr.responseText;
+                } else {
+                    document.getElementById("csv-viewer").innerHTML = "Error loading file.";
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>CSV Files</h1>
+    <ul>
+    {% for file in files %}
+        <li>
+            <span>{{ file }}</span>
+            <div>
+                <button onclick="viewCSV('{{ file }}')">View</button>
+                <button onclick="window.location.href='/download/{{ file }}'">load</button>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+    <div id="csv-viewer">
+        <!-- CSV content will be displayed here -->
+    </div>
+</body>
+</html>
