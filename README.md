@@ -86,20 +86,20 @@ SentimentSpectrum/
 ├── Data/
 │   ├── Raw Data/
 │   │   ├── <Phone_model name>/
-│   |   │   └── Camera_Review.csv                   *Other Raw data are here.
+│   |   │   └── Camera_Review.csv                   
 │   ├── Sentiment Data/
 │   │   ├── <Phone_model name>/
-│   │   │   └── Sentiment_Camera_Review.csv         *Other Raw data are here.
+│   │   │   └── Sentiment_Camera_Review.csv         
 ├── Visualisations/
 │   ├── <Phone_model name>/
 │   │   ├── Feature Review/
-│   │   │   └── Camera_sentiment_distribution.png   *Other 2 Plots are here.
+│   │   │   └── Camera_sentiment_distribution.png   
 │   │   ├── Geo Data/
-│   │   │   └── Camera_GeoData.csv                  *Other 2 Plots are here.
+│   │   │   └── Camera_GeoData.csv                  
 │   │   ├── Overall Review/
-│   │   │   └── sentiment_distribution.png          *Other 2 Plots are here.
+│   │   │   └── sentiment_distribution.png          
 │   |   ├── Review Details/
-│   |   |   └── pie_chart.png                           *Other 2 Plots are here.
+│   |   |   └── pie_chart.png                           
 
 ## 🎯 Conclusion
 SentimentSpectrum is a powerful tool for extracting and analyzing customer sentiments from live eCommerce reviews. With its real-time sentiment predictions, advanced visualizations, and easy-to-use interface, it is an essential resource for businesses and data scientists alike.
