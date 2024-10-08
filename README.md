@@ -64,42 +64,33 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
 ## 📥 Data Collection Process
 Make sure ChromeDriver is properly installed and configured for Selenium to scrape live reviews. Follow the instructions in the application to collect and process real-time data.
 
-## 📂 Project Skeleton
-Here's the directory structure of the SentimentSpectrum project:
-SentimentSpectrum/
-│
-├── about_project.html
-├── analysis_and_visualisation.html
-├── chromedriver.exe
-├── config.py
-├── connections.py
-├── datacleaner.py
-├── geographical_visualisation.html
-├── phone_list.py
-├── requirements.txt
-├── reviewScraper.py
-├── sentiment_analysis_home.html
-├── sentiment_model.py
-├── view_csv.html
-├── visualisations.py
-│
-├── Data/
-│   ├── Raw Data/
-│   │   ├── <Phone_model name>/
-│   |   │   └── Camera_Review.csv                   
-│   ├── Sentiment Data/
-│   │   ├── <Phone_model name>/
-│   │   │   └── Sentiment_Camera_Review.csv         
-├── Visualisations/
-│   ├── <Phone_model name>/
-│   │   ├── Feature Review/
-│   │   │   └── Camera_sentiment_distribution.png   
-│   │   ├── Geo Data/
-│   │   │   └── Camera_GeoData.csv                  
-│   │   ├── Overall Review/
-│   │   │   └── sentiment_distribution.png          
-│   |   ├── Review Details/
-│   |   |   └── pie_chart.png                           
+## 📂 SentimentSpectrum Project Directory Structure
+The following is the directory structure for the **SentimentSpectrum** project:
+SentimentSpectrum/ ├── about_project.html ├── analysis_and_visualisation.html ├── chromedriver.exe ├── config.py ├── connections.py ├── datacleaner.py ├── geographical_visualisation.html ├── phone_list.py ├── requirements.txt ├── reviewScraper.py ├── sentiment_analysis_home.html ├── sentiment_model.py ├── view_csv.html ├── visualisations.py ├── Data/ │ ├── Raw Data/ │ │ ├── <Phone_model name>/ │ │ │ └── Camera_Review.csv # Other raw data files are here. │ ├── Sentiment Data/ │ │ ├── <Phone_model name>/ │ │ │ └── Sentiment_Camera_Review.csv # Other raw sentiment data files are here. ├── Visualisations/ │ ├── <Phone_model name>/ │ │ ├── Feature Review/ │ │ │ └── Camera_sentiment_distribution.png # Other 2 plots are here. │ │ ├── Geo Data/ │ │ │ └── Camera_GeoData.csv # Other 2 plots are here. │ │ ├── Overall Review/ │ │ │ └── sentiment_distribution.png # Other 2 plots are here. │ │ ├── Review Details/ │ │ │ └── pie_chart.png # Other 2 plots are here.
+
+
+## Overview of Key Files and Directories
+
+- **HTML Files**: These files represent the front-end components of the web application for sentiment analysis and visualization.
+  - `about_project.html`: About the project page.
+  - `analysis_and_visualisation.html`: Page for analysis and visualizations.
+  - `geographical_visualisation.html`: Page for geographical data visualization.
+  - `sentiment_analysis_home.html`: Home page for sentiment analysis.
+
+- **Python Scripts**: The backend logic for data handling and sentiment analysis.
+  - `config.py`: Configuration settings for the application.
+  - `connections.py`: Database or API connection settings.
+  - `datacleaner.py`: Data cleaning and preprocessing functions.
+  - `phone_list.py`: A list of phones for analysis.
+  - `reviewScraper.py`: Script for scraping customer reviews.
+  - `sentiment_model.py`: Model for sentiment analysis.
+  - `visualisations.py`: Functions for generating visualizations.
+
+- **Data Directories**:
+  - **Raw Data**: Contains original raw data files for different phone models.
+  - **Sentiment Data**: Contains processed sentiment analysis data for different phone models.
+
+- **Visualisations Directory**: Contains visual outputs of the analysis for different phone models, organized into feature reviews, geographical data, overall reviews, and review details.
 
 ## 🎯 Conclusion
 SentimentSpectrum is a powerful tool for extracting and analyzing customer sentiments from live eCommerce reviews. With its real-time sentiment predictions, advanced visualizations, and easy-to-use interface, it is an essential resource for businesses and data scientists alike.
