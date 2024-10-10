@@ -66,8 +66,8 @@ Make sure ChromeDriver is properly installed and configured for Selenium to scra
 
 ## 📂 SentimentSpectrum Project Directory Structure
 SentimentSpectrum/
-| ├── about_project.html|
-| ├── analysis_and_visualisation.html|
+|├── about_project.html |
+|├── analysis_and_visualisation.html |
 - ├── chromedriver.exe
 - ├── config.py
 - ├── connections.py
