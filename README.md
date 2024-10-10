@@ -62,7 +62,7 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
    Go to http://localhost:5000/ to access the web application.
 
 ## 📥 Data Collection Process
-Make sure ChromeDriver is properly installed and configured for Selenium to scrape live reviews. Follow the instructions in the application to collect and process real-time data.
+Make sure ChromeDriver/ is properly installed and configured for Selenium to scrape live reviews. Follow the instructions in the application to collect and process real-time data.
 
 ## 📂 SentimentSpectrum Project Directory Structure
 SentimentSpectrum/
