@@ -98,7 +98,7 @@ SentimentSpectrum/
 │   │   │   └── sentiment_distribution.png         # Other 2 plots are here
 │   │   ├── Review Details/
 │   │   │   └── pie_chart.png 
-```plaintext
+```
 
 ## Overview of Key Files and Directories
 
