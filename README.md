@@ -55,10 +55,11 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
    git clone https://github.com/augustine-aj/SentimentSpectrum.git
    cd SentimentSpectrum
 2. **Install dependencies**:
+3. ```bash
    pip install -r requirements.txt
-3. **Run the application**:
+4. **Run the application**:
    connections.py
-4. **Open your browser**:
+5. **Open your browser**:
    Go to http://localhost:5000/ to access the web application.
 
 ## 📥 Data Collection Process
