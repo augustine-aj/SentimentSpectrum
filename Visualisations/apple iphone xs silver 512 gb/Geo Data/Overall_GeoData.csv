@@ -1,0 +1,67 @@
+Latitude,Longitude,Reviewer_Location,Sentiment,Reviewer_Name
+10.04451205,78.7433633227108,karaikkudi,Positive,basith raja
+10.91564885,79.80694879844232,puducherry,Positive,anand ramesh
+11.0018115,76.9628425,coimbatore,Positive,prabhu eswaran
+11.1076538,77.1770895,karumathampatti,Positive,vishnu prasath
+11.49052815,77.35052739885393,erode,Positive,sakthivel shanmugam
+11.8763836,75.3737973,kannur,Positive,mohammed anas p p
+12.9767936,77.590082,bangalore,Positive,flipkart customer
+12.9767936,77.590082,bengaluru,Positive,"sandeep sagar, anjan biswas, akash nandawadgi, sreenivas reddy, nagendra kumar, bhawani singh, ananthashayana g k, somnath misra, gowtham sivanesan, bhargav d r, flipkart customer"
+13.0836939,80.270186,chennai,Positive,"akash prabakar, gowtham ashok kumar"
+13.5557979,78.500872,madanapalle,Positive,sreeram bablu
+13.9443237,76.6167407,hiriyur,Positive,praneeth aburi
+15.8361517,80.3636644,chirala,Positive,yeshu m
+17.360589,78.4740613,hyderabad,Neutral,venu gopal sriramadasu
+17.360589,78.4740613,hyderabad,Positive,"sudarsan vadderi, srikanth yarkala"
+18.0068629,79.5578719,hanamkonda,Positive,prem sagar
+18.5213738,73.8545071,pune,Positive,"flipkart customer, tushar jagtap, shahbaz shaikh, swapnil deshmukh, nitish kumar"
+18.6279288,73.8009829,pimpri chinchwad,Positive,vaibhav arya
+19.0308262,73.0198537,navi mumbai,Positive,vikram kadian
+19.0785451,72.878176,mumbai,Positive,"kiran gole, supriyo kar"
+19.1943294,72.9701779,thane,Negative,james poonnolly
+20.0112475,73.7902364,nashik,Positive,kshitij upasani
+21.1498134,79.0820556,nagpur,Positive,prayagraj kashyap
+21.2380912,81.6336993,raipur,Positive,shambhunath gorain
+22.23617945,83.35295335037318,raigarh district,Positive,saurabh mhatre
+22.3053263,70.8028377,rajkot,Positive,maheshwari gangajaliya
+22.5726459,88.3638953,kolkata,Positive,"govin thermoplast engineering pvt ltd, aparup chatterjee"
+22.5736296,88.3251045,howrah,Positive,sukamal mondal
+22.7203616,75.8681996,indore,Positive,"lucky shrivastava, abhishek sangya"
+22.7529598,77.7173261,hoshangabad,Positive,nikhil malviya
+22.8015194,86.2029579,jamshedpur,Positive,anurag swain
+23.0215374,72.5800568,ahmedabad,Positive,mohit rawal
+23.2232877,72.6492267,gandhinagar,Positive,arpit patel
+23.7952809,86.4309638,dhanbad,Positive,shwetang jaiswal
+24.786306,84.41448983395554,aurangabad,Positive,charan thakur
+24.9001003,84.0182110684575,sasaram,Positive,abhishek david
+25.193859,85.5208617,bihar sharif,Positive,rahul kumar
+25.3476006,72.6260916,jalor,Positive,dhanraj solanki
+25.424304,82.4883922872558,bhadohi,Positive,rubi modanwal
+25.4381302,81.8338005,allahabad,Positive,"yash keshari, atul dwivedi"
+25.4930513,86.69822644137813,khagaria,Positive,satyam gupta
+25.529855,78.65278023546288,jhansi,Positive,himanshu singh
+25.60348625,83.50758884009142,ghazipur,Positive,flipkart customer
+25.87495945,84.12103292973015,ballia,Positive,aman azad
+26.4609135,80.3217588,kanpur,Positive,bhaskar roy
+26.6229928,92.7976082,tezpur,Positive,emamul haque
+26.62628045,88.73344851670664,jalpaiguri,Positive,madhumita maitra
+26.6677977,83.364233378331,gorakhpur,Positive,pradeep kumar dixit
+26.8381,80.9346001,lucknow,Positive,"manuj kumar singh, pratyush gupta, siddhartha gupta"
+27.20930715,79.06253691568566,mainpuri,Positive,ankit baghel
+27.662505799999998,75.02799052644464,sikar,Positive,vijay saini
+28.4031478,77.3105561,faridabad,Positive,aman virdi
+28.4646148,77.0299194,gurgaon,Positive,sonu kumar
+28.4646148,77.0299194,gurugram,Positive,"saksham jain, deepak jamdagni, flipkart customer"
+28.59644605,76.65053662578484,jhajjar district,Positive,rakesh kumar
+28.6138954,77.2090057,new delhi,Neutral,shailendra kumar
+28.6138954,77.2090057,new delhi,Positive,"omparkash soni, raushan iqbal, bilal firoz, niraj joshi, vijay adhikari, ajeet singh, rahat khan, vishal kumar, flipkart customer"
+28.739459150000002,77.83517038273197,hapur,Positive,flipkart customer
+28.7678881,77.46066723508514,ghaziabad,Positive,"rohit paliwal, suraj saxena"
+29.6803266,76.9896254,karnal,Positive,daljeet singh
+29.9856799,77.50406459058038,saharanpur district,Positive,sayed gufran ali
+30.10912495,76.70748442722756,ismailabad,Positive,parmjeet singh
+30.3255646,78.0436813,dehradun,Positive,surajbhan kumar
+30.3716802,75.5039886995367,barnala,Positive,lali sekha
+30.9090157,75.851601,ludhiana,Positive,prince kumar
+31.6343083,74.8736788,amritsar,Positive,aartipal aartipal
+45.9383,3.2553,surat,Positive,tanmoy
