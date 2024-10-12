@@ -57,10 +57,11 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
 2. **Install dependencies**:
 3. ```bash
    pip install -r requirements.txt
+    ```
 4. **Run the application**:
-   connections.py
+  ```bash connections.py ```
 5. **Open your browser**:
-   Go to http://localhost:5000/ to access the web application.
+   Go to `http://localhost:5000/` to access the web application.
 
 ## 📥 Data Collection Process
 Make sure ChromeDriver is properly installed and configured for Selenium to scrape live reviews. Follow the instructions in the application to collect and process real-time data.
@@ -68,37 +69,55 @@ Make sure ChromeDriver is properly installed and configured for Selenium to scra
 ## 📂 SentimentSpectrum Project Directory Structure
 ```plaintext
 SentimentSpectrum/
-├── about_project.html
-├── analysis_and_visualisation.html
-├── chromedriver.exe
-├── config.py
-├── connections.py
-├── datacleaner.py
-├── geographical_visualisation.html
-├── phone_list.py
-├── requirements.txt
-├── reviewScraper.py
-├── sentiment_analysis_home.html
-├── sentiment_model.py
-├── view_csv.html
-├── visualisations.py
-├── Data/
-│   ├── Raw Data/
-│   │   ├── <Phone_model name>/
-│   │   │   └── Camera_Review.csv         # Other raw data files are here
-│   ├── Sentiment Data/
-│   │   ├── <Phone_model name>/
-│   │   │   └── Sentiment_Camera_Review.csv # Other raw sentiment data files are here
-├── Visualisations/
-│   ├── <Phone_model name>/
-│   │   ├── Feature Review/
-│   │   │   └── Camera_sentiment_distribution.png  # Other 2 plots are here
-│   │   ├── Geo Data/
-│   │   │   └── Camera_GeoData.csv                 # Other 2 plots are here
-│   │   ├── Overall Review/
-│   │   │   └── sentiment_distribution.png         # Other 2 plots are here
-│   │   ├── Review Details/
-│   │   │   └── pie_chart.png 
+├── chromedriver/                          # Directory for chromedriver executable
+│   └── chromedriver.exe                   # The chromedriver executable for Selenium
+│
+├── Data/                                   # Directory for data-related files
+│   ├── Raw Data/                           # Directory for raw data files
+│   │   ├── <Phone_model1 name>/           # Placeholder for specific phone model
+│   │   │   └── Camera_Review.csv           # Raw camera review data
+│   │   ├── <Phone_model2 name>/           # Another phone model directory
+│   │   │   └── Camera_Review.csv           # More raw camera review data
+│   │
+│   ├── Sentiment Data/                     # Directory for processed sentiment data
+│   │   ├── <Phone_model name>/             # Placeholder for specific phone model
+│   │   │   └── Sentiment_Camera_Review.csv # Processed sentiment data
+│   │   ├── <Phone_model2 name>/           # Another phone model
+│   │   │   └── Sentiment_Camera_Review.csv # Processed sentiment data
+│   │
+│   ├── documents/                          # Directory for project documents
+│   │   ├── sentimentspectrum.png           # Project image or logo
+│   │   └── SentimentSpectrum_Project_Overview.pdf # Overview document of the project
+│
+├── frontend/                               # Directory for frontend assets and templates
+│   ├── static/                             # Directory for static files (CSS, images, etc.)
+│   │   ├── content01bg.jpg                # Background image for content 1
+│   │   ├── contentbg.jpg                   # General background image
+│   │   ├── endcontentbg.jpg                # Background image for end content
+│   │   ├── Spectrum.png                     # Main spectrum image
+│   │   └── subcontentbg.jpg                # Background for subcontent
+│   │
+│   ├── about_project.html                  # HTML page about the project
+│   ├── analysis_and_visualisation.html     # HTML page for analysis and visualisation
+│   ├── geographical_visualisation.html      # HTML page for geographical visualisation
+│   ├── sentiment_analysis_home.html         # Main sentiment analysis interface
+│   └── view_csv.html                       # HTML page to view CSV files
+│
+├── Visualisations/                         # Directory for storing visualisation outputs
+│   ├── <Phone_model name>/                 # Placeholder for visualisation related to a specific phone model
+│   │   ├── Feature Review/                 # Directory for feature review visualisations
+│   │   ├── Geo Data                        # Directory for geographical data visualisations
+│   │   ├── Overall Review                  # Directory for overall review visualisations
+│   │   └── Review Details                  # Directory for detailed review visualisations
+│
+├── config.py                               # Configuration file for the project
+├── connections.py                          # Main Flask application file
+├── datacleaner.py                          # Module for data cleaning processes
+├── phone_list.py                           # Script/module to manage phone models
+├── requirements.txt                        # List of project dependencies
+├── reviewScraper.py                        # Script for scraping reviews from websites
+├── sentiment_model.py                      # Module for sentiment analysis model
+└── visualisations.py                       # Module for generating visualisations
 ```
 
 ## Overview of Key Files and Directories
