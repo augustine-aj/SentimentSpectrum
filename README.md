@@ -48,6 +48,17 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
 - **Matplotlib & Seaborn**: For data visualization.
 - **Leaflet & OpenStreetMap**: For geographical visualizations.
 
+## ⚠️ Important Warning
+
+**Please ensure that the ChromeDriver version matches your installed Chrome browser version.** 
+
+If the ChromeDriver is not compatible with your Chrome browser, the web scraping process may fail, resulting in errors or incomplete data retrieval. 
+
+To check your Chrome version, open Chrome and go to `chrome://settings/help`. Then, download the appropriate version of ChromeDriver from the [ChromeDriver download page](https://chromedriver.chromium.org/downloads).
+
+**Note:** All other visualizations and functionalities of the application will work as expected, regardless of the ChromeDriver configuration.
+
+
 ## 📦 Installation & Setup
 
 1. **Clone the repository**:
