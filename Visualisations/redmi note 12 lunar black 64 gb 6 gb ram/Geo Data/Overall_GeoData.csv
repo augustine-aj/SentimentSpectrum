@@ -1,0 +1,86 @@
+Latitude,Longitude,Reviewer_Location,Sentiment,Reviewer_Name
+9.9674277,76.2454436,kochi,Positive,chakola david paul
+10.0640341,76.6218187,kothamangalam,Neutral,rasheed km
+10.5270099,76.214621,thrissur,Positive,saravanan sara
+10.65903695,79.20142776213416,thanjavur district,Positive,srikrishnakumar venkatanarayanan
+11.0018115,76.9628425,coimbatore,Neutral,gnanasoundarya sundaram
+11.4909674,16.3950895,nanmanda,Positive,shariful islam
+12.9767936,77.590082,bengaluru,Positive,"prashanth r h, pavan kumar"
+12.98815675,77.62260003796,bangalore,Positive,s p bala kumar
+13.0836939,80.270186,chennai,Positive,pravin royal
+14.6192362,74.8388611,sirsi,Positive,adnan sirsvi
+15.266493,76.3872297,hosapete,Positive,flipkart customer
+15.8572666,74.5069343,belgaum,Positive,flipkart customer
+16.054719400000003,76.90036472411589,raichur,Negative,ravinayak ravi
+16.21277,81.03069575082347,krishna,Positive,anil tallada
+16.2853547,80.56861427693647,guntur district,Positive,ashok mannava
+16.5087573,80.6185089,vijayawada,Positive,"vv srikanth kumar, sivaram reddy padala"
+16.5427689,81.527344,bhimavaram,Positive,tapas jana
+16.7104257,81.1153816,eluru,Neutral,flipkart customer
+16.99566385,81.71543778889063,east godavari district,Positive,ganta vv satyanarayana
+17.1772683,77.2823552,sedam,Positive,fareed shaik
+17.3187641,78.3926573,budwel,Positive,karunakar reddy gade
+17.360589,78.4740613,hyderabad,Positive,shaik shabuddin
+17.7231276,83.3012842,visakhapatnam,Positive,alamanda manikanta
+18.9918442,75.90978399809711,beed,Positive,dadasaheb jadhav
+19.3592411,73.3708244879681,thane district,Positive,vishalakshi
+19.82657565,83.04087019477804,kalahandi district,Neutral,sarat dhangdamajhi
+19.8453138,74.0000241,sinnar,Positive,aarzu shaikh
+21.0633288,86.5053731,bhadrak,Positive,gugu sahoo
+21.1982964,81.40079215767969,durg,Positive,gajendra kumar
+21.54901785,83.89373126207971,hirakud,Positive,ashok achari
+21.9195099,78.1227559,amla,Positive,shubham raikwar
+22.25,9.8,sehara,Negative,rajib mondal
+22.2973142,73.1942567,vadodara,Neutral,yash gabhawala
+22.3660516,88.5492746,banshra,Positive,sujan samaddar
+22.4736567,88.173933,budge budge,Positive,subhankar roy
+22.5,88.666667,north twenty four parganas district,Positive,rahul singha roy
+22.5726459,88.3638953,kolkata,Positive,"papia adhikari, chitra chatterjee"
+22.8639237,88.3703496,chandannagar,Positive,sarukh sk
+22.9496431,88.4378838,kanchrapara,Positive,agnibesh nath chatterjee
+22.9561711,73.3370129,balasinor,Positive,"sohil belim, sohil belim"
+23.0215374,72.5800568,ahmedabad,Positive,devv shah
+23.1435428,88.1573731,debipur,Neutral,sudarshan khan
+23.2969449,72.3306381,kadi,Positive,hardikkumar prajapati
+23.388408849999998,87.96067626428223,purba bardhaman district,Positive,subrata senapati
+24.3926337,88.6018557,malda division,Positive,jyotirmoy mandal
+24.5001772,77.26009592641483,guna district,Positive,rahul ahirwar
+24.8328273,86.81611137878144,banka district,Positive,flipkart customer
+25.09770975,88.12617134920436,maldah district,Positive,jiaul momin
+25.132982,86.52484857739515,kharagpur,Neutral,abdul farman
+25.15295785,85.00650426458421,jehanabad district,Positive,sonu kumar
+25.6093239,85.1235252,patna,Positive,sandeep sanu
+25.6108508,88.35356575644869,kaliaganj,Positive,tanu mahi
+25.773344299999998,84.78497716754097,chapra,Positive,rahul kumar
+25.9214451,84.77597313027485,saran district,Positive,"rahul yadav, guddu kumar"
+26.03909045,83.49858462133619,mau,Positive,flipkart customer
+26.131008,84.39107448141786,siwan district,Positive,ankitankit gupta
+26.1482548,85.3316096785584,muzaffarpur district,Positive,"sudhanshu kumar, chintu kumar"
+26.25,89.5,koch bihar district,Neutral,mousumi sarkar
+26.260473150000003,82.23805321467546,sultanpur district,Positive,flipkart customer
+26.26510125,87.36994367279917,araria,Positive,"cute aman mudassir, sahil raj"
+26.269739549999997,82.99508798317166,burhanpur,Positive,ajay mahajan
+26.33188715,74.71697524629388,ajmer district,Positive,monu mali
+26.42111655,84.37391327996377,gopalganj,Positive,kaish ahmad
+26.4609135,80.3217588,kanpur,Positive,"aditya, aman rajput"
+26.5108262,93.9743686,golaghat,Positive,prahlab saikia
+26.7203673,93.14289738093706,biswanath chariali,Positive,sintu ahmed
+27.0,84.5,pashchim champaran district,Positive,sonu kumar
+27.075550399999997,77.87538317510317,agra district,Positive,ankush baghel
+27.1538084,75.74653688989426,jaipur district,Positive,ajoy
+28.3622661,75.6042342,pilani town,Positive,sachin kumar
+28.4031478,77.3105561,faridabad,Positive,"vikram singh, neeraj gupta, pankaj sengar"
+28.4479606,76.8229285,farrukhnagar,Positive,prashant mishra
+28.4670734,77.5137649,greater noida,Positive,hashim khan
+28.4998888,77.6407613,nagla,Positive,arvind kumar
+28.5706333,77.3272147,noida,Positive,mohammad ariz khan
+28.6138954,77.2090057,new delhi,Positive,"mohd amir khan, islam raza khan"
+28.7678881,77.46066723508514,ghaziabad,Positive,rajesh verma
+28.85468575,77.30909451417439,khekada,Positive,abhishek choudhary
+28.879655300000003,78.80953353954959,moradabad district,Positive,jishant chauhan
+29.6803266,76.9896254,karnal,Positive,yogesh baghel
+29.9384473,78.1452985,haridwar,Positive,abhay brahmachari
+30.4391922,77.7357076,herbertpur,Positive,rohan jain
+30.5882408,76.8438542,dera bassi,Positive,flipkart customer
+31.6809219,75.6323719,urmar tanda,Positive,raj mehra
+51.3350028,26.6171275,sarni,Positive,pradeep prajapati

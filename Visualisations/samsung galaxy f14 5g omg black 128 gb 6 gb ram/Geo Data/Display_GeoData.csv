@@ -1,0 +1,36 @@
+Latitude,Longitude,Display_Reviewer_Location,Sentiment,Display_Reviewer_Name
+9.9261153,78.1140983,madurai,Positive,karthyk a
+11.0018115,76.9628425,coimbatore,Positive,vijay a
+13.0836939,80.270186,chennai,Neutral,jenis valan raja m
+13.0836939,80.270186,chennai,Positive,"karthick arunachalam, sathishkumar panneerselvam"
+13.8306127,77.492635,hindupur,Neutral,pavan kumar
+16.4329976,80.9937151,gudivada krishna district,Positive,kiran gude
+16.5087573,80.6185089,vijayawada,Neutral,hari munagapati
+16.8634704,81.9300945,mandapeta,Negative,siva veera varaprasasd
+18.403281,76.2408223,murud,Neutral,wasim nadkar
+18.5213738,73.8545071,pune,Positive,kedar gadgil
+18.9733536,72.82810491917377,mumbai,Negative,"abhishek prajapati, dilip mhaske"
+18.9733536,72.82810491917377,mumbai,Positive,"tejas vaja, ansari hamza ali iftekhar ali"
+19.0308262,73.0198537,navi mumbai,Positive,prashant koli
+19.54570375,78.60867589700759,adilabad,Negative,dr shivalingu tukareddy
+20.2602964,85.8394521,bhubaneswar,Neutral,mrutyunjaya pattanaik
+21.1498134,79.0820556,nagpur,Positive,raju chourpagar
+21.192364650000002,72.95510230927962,surat district,Neutral,flipkart customer
+21.49308515,86.63272982626935,berhampur,Negative,anant rath
+21.8027785,87.805953,basantia,Negative,pallabi das
+22.20718965,78.79883295930742,chhindwara,Positive,mithlesh kumar bhawarker
+22.8907698,88.4355787,north barrackpur,Negative,nirmalendu chowdhury
+23.0757335,87.3146343,bishnupur bankura district,Positive,milan khan
+23.2497879,91.4550309,belonia,Neutral,samar ranjan sarkar
+23.2584857,77.401989,bhopal,Positive,arun sharma
+24.85966375,67.02443340715939,rewa division,Positive,diler singh
+25.5760446,91.8825282,shillong,Positive,manas ranjan pal
+26.253086000000003,84.94308207233439,sahebganj,Positive,nishant kumar
+26.2967719,73.0351433,jodhpur,Negative,saurabh
+28.4947158,80.1076121626605,pilibhit,Neutral,rahul verma
+28.5706333,77.3272147,noida,Negative,amit maurya
+28.6138954,77.2090057,new delhi,Positive,"flipkart customer, danish zafar a"
+28.868311,79.29807496695935,bilaspur,Negative,dhananjay yadav
+30.48904715,77.5819610357789,paonta sahib,Positive,vishal lamba
+30.6014507,74.79501756894368,faridkot,Negative,flipkart pardeep kumar
+30.9090157,75.851601,ludhiana,Positive,singh sukh

@@ -1,0 +1,40 @@
+Latitude,Longitude,Camera_Reviewer_Location,Sentiment,Camera_Reviewer_Name
+-39.4909469,176.91449685784187,batika,Positive,a
+8.4882267,76.947551,thiruvananthapuram,Positive,abhishek pillai
+10.0744148,76.20910567313183,mangalya,Neutral,anand khandelwal
+12.8698101,74.8430082,mangaluru,Positive,nihal kotian
+12.9767936,77.590082,bangalore,Positive,vasanthkumar m r
+12.98815675,77.62260003796,bengaluru,Positive,sijumon c k
+13.0836939,80.270186,chennai,Positive,flipkart customer
+16.8269911,75.7175387,vijapura,Negative,shivanand swami
+17.360589,78.4740613,hyderabad,Neutral,flipkart customer
+17.7231276,83.3012842,visakhapatnam,Positive,nishant kumar
+17.84990665,75.27632027348457,solapur,Positive,ninad kulkarni
+18.5213738,73.8545071,pune,Positive,rahul roshan
+18.6279288,73.8009829,pimpri chinchwad,Positive,dhananjay kale
+20.2602964,85.8394521,bhubaneswar,Positive,mrutyunjaya pattanaik
+20.84288265,75.52612463784979,jalgaon,Positive,flipkart customer
+21.192364650000002,72.95510230927962,surat district,Neutral,flipkart customer
+22.5726459,88.3638953,kolkata,Neutral,flipkart customer
+22.5736296,88.3251045,howrah,Positive,riya tripathi
+22.7203616,75.8681996,indore,Positive,chetna soni
+22.9749723,88.4345915,kalyani,Neutral,snehadristi debnath
+23.0757335,87.3146343,bishnupur bankura district,Positive,milan khan
+23.1646919,72.5821046,adalaj,Negative,akshay kumar
+23.1738124,88.563677,ranaghat,Neutral,swapan kumar das
+25.316620399999998,82.38599337007872,gyanpur,Positive,flipkart customer
+25.87495945,84.12103292973015,ballia district,Positive,aman thakur
+25.9214451,84.77597313027485,saran,Positive,bablu kumar
+26.583333,84.833333,purba champaran district,Positive,aayush kumar singh rajput
+26.6229928,92.7976082,tezpur,Negative,chhaya rani biswas
+26.715562900000002,79.09170983360895,etawah,Negative,flipkart customer
+26.9154576,75.8189817,jaipur,Positive,flipkart customer
+27.1752554,78.0098161,agra,Negative,jitendra sharma
+27.9921616,76.3856561,neemrana,Positive,deepak chakraborty
+28.4670734,77.5137649,greater noida,Negative,anand shukla
+28.7678881,77.46066723508514,ghaziabad district,Negative,gopal singh
+29.1560645,77.30640323368971,baraut,Positive,priyanshu panwar
+29.44969785,77.74293325807088,muzaffarnagar,Neutral,vanshraj tyagi
+30.176359,78.1246442,doiwala,Positive,anup kukreti
+30.3255646,78.0436813,dehradun,Positive,raj kumar sharma
+45.9383,3.2553,surat,Positive,flipkart customer
