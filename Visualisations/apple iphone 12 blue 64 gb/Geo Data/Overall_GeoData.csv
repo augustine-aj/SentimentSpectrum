@@ -1,0 +1,76 @@
+Latitude,Longitude,Reviewer_Location,Sentiment,Reviewer_Name
+8.4882267,76.947551,thiruvananthapuram,Positive,"flipkart customer, aneesh tg"
+9.6287383,76.64553257390992,kottayam district,Positive,akshai varghese
+9.815478500000001,76.99915994809137,idukki district,Positive,philip augustine
+10.6027705,76.20258139405338,wadakkanchery,Positive,flipkart customer
+10.804973,78.6870296,tiruchirappalli,Positive,vivishek mohan
+10.8635974,76.3911424,mannarkad i,Positive,biju paul
+11.1365247,79.4692539,manakunnam,Positive,vishnu suresh
+11.2450558,75.7754716,kozhikode,Positive,arjun km
+12.3051828,76.6553609,mysore,Positive,anand s
+12.98815675,77.62260003796,bengaluru,Positive,"sunita yadav, najir hussain"
+13.0,77.583333,bangalore urban,Positive,"athul shabu, mohan reddy appu"
+13.0836939,80.270186,chennai,Positive,naresh mahendran
+15.398403,73.8129178,vasco da gama,Positive,"sanjay singh, dheeraj singh"
+17.360589,78.4740613,hyderabad,Positive,rajesh barui
+17.5925245,83.0173559,rajam,Positive,hariprasad b
+17.7138983,80.04134252767227,mahabubabad,Positive,jaya chandra reddy
+17.7231276,83.3012842,visakhapatnam,Positive,sivaramaraju raju
+18.080753,73.42438,mahad,Positive,vishal gandhi
+18.1139259,83.3979562,vizianagaram,Positive,abhiram dikkala
+18.355334749999997,76.75489974062862,latur,Positive,anurag lad
+18.5213738,73.8545071,pune,Positive,"shivam kengale, rameshwar patil, anurag singh, devendra uttekar"
+18.7318232,76.3854836,ambejogai,Positive,faizan siddiqui
+18.7337107,73.6728593,talegaon dabhade,Positive,aditya sathe
+19.0785451,72.878176,mumbai,Positive,"rupesh thik, rishabh mishra, sreekanth v, ketan deodhar"
+19.1943294,72.9701779,thane,Positive,"flipkart customer, vijaya kurkute"
+19.3102682,72.8530973,mira bhayandar,Positive,ishu kumar
+19.3592411,73.3708244879681,thane district,Positive,flipkart customer
+19.4210423,72.8197221,vasai virar,Positive,akil khan
+19.7984865,72.761452,boisar,Positive,manoj kumar
+20.2602964,85.8394521,bhubaneswar,Positive,"abhishek behera, sapan kumar sahoo"
+21.1498134,79.0820556,nagpur,Positive,flipkart customer
+22.028124,88.0632655,haldia,Positive,akhil gautam
+22.06030655,85.39277997446213,barbil,Positive,flipkart customer
+22.343645700000003,88.48960971476038,baruipur,Positive,ritwik samanta
+22.5726459,88.3638953,kolkata,Positive,"souvik sengupta, flipkart customer"
+23.0569819,88.78135195461178,bongaon,Positive,sunita sen
+23.2232877,72.6492267,gandhinagar,Positive,shashikant pandey
+23.2452165,72.4966223,kalol gandhinagar district,Positive,nishakar verma
+23.3700501,85.3250387,ranchi,Positive,flipkart customer
+23.5614687,77.68939532600913,parasi,Positive,indradav sharma
+23.808307550000002,78.75825398721975,sagar,Positive,arpit jain
+23.8312377,91.2823821,agartala,Positive,subinay sarkar
+24.4148159,83.0637516718631,sonbhadra,Positive,balram prajapati
+25.1737019,75.8574194,kota,Positive,ayaz ahmad
+25.435330049999997,82.1890599043146,handia,Positive,flipkart customer
+25.48911765,74.33007256947698,bhilwara,Positive,amit kumar suwalka
+25.5814853,71.19249222700306,barmer,Positive,imtiyaz chadwa
+25.6271966,88.1317967,raiganj,Positive,pritam dutta
+25.6618755,94.1019156,kohima,Positive,lenlen yashu
+25.9359555,79.42432768008604,orai,Positive,shivam thakur
+26.2037247,78.1573628,gwalior,Positive,manvendra singh baish
+26.2967719,73.0351433,jodhpur,Positive,ajit singh
+26.3313646,92.75247628339588,nagaon,Positive,mehadi khan
+26.4609135,80.3217588,kanpur,Positive,ankur sharma
+26.62628045,88.73344851670664,jalpaiguri,Positive,praveen chhetri
+26.63033105,91.70161704075863,goreswar,Positive,suddha ram boro
+26.8381,80.9346001,lucknow,Positive,tushar mukherjee
+27.400599,94.99508646784955,dibrugarh district,Positive,kemburu ashik
+27.5945155,94.71920979201423,dhemaji district,Positive,ghimre keto
+28.074659,80.4720642,gola gokarannath,Positive,shivam kumar
+28.2039413,76.837441,bhiwadi,Positive,nishant joshi
+28.4479606,76.8229285,farrukhnagar,Positive,aman yadav
+28.45823445,79.40474517998476,bareilly,Positive,flipkart customer
+28.4646148,77.0299194,gurugram,Positive,pranjal dwivedi
+28.6138954,77.2090057,new delhi,Positive,flipkart customer
+28.7678881,77.46066723508514,ghaziabad,Positive,flipkart customer
+28.90276745,76.9037359818096,kharkhoda,Positive,parveen
+28.9963296,77.7061915,meerut,Positive,aalok kumar
+31.29223115,75.56788777097373,jalandhar,Positive,puneet nanda
+31.583333,76.25,una,Positive,anchal dhiman
+31.5834642,76.23514522983882,una district,Positive,basudev thakur
+31.8103509,76.52414016733772,tira sujanpur,Positive,rahul verma
+35.9945647,59.0749853,jahanabad,Positive,sudhir kumar
+45.9383,3.2553,surat,Positive,savan patel
+55.9554575,-3.1989995,new town,Positive,sibsankar das

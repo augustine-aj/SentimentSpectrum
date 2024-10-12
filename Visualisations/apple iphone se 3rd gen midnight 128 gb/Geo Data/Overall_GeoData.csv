@@ -1,0 +1,65 @@
+Latitude,Longitude,Reviewer_Location,Sentiment,Reviewer_Name
+8.8879509,76.5955013,kollam,Positive,akhil sivakumar
+8.9674039,76.85857804538561,kollam district,Positive,saji kumar
+9.8290255,76.4555856,piravam,Positive,linu p l
+11.3796173,78.7297869,arumbavur,Positive,gopinath rajan
+11.465593550000001,75.89194000061082,kozhikode district,Positive,aby cherian
+12.9767936,77.590082,bangalore,Positive,vaibhav sharma
+12.9767936,77.590082,bengaluru,Positive,"ramprasad ramasamy, p ranjith, flipkart customer, deepika jain, srinivas m, subrata mohapatra, sajil kalarikkal"
+12.98815675,77.62260003796,bangalore,Positive,"krishna kishore, flipkart customer"
+13.0,77.583333,bangalore urban,Positive,flipkart customer
+13.0836939,80.270186,chennai,Positive,"sada lingam, flipkart customer, mohan dass"
+14.3049174,76.52972341987515,chitradurga,Positive,dhananjaya r v
+14.6866338,79.8875241,dharmavaram,Neutral,palem chandu
+15.3518378,75.1379848,hubballi,Positive,mayur patil
+15.66426435,79.47330014039173,prakasam district,Negative,badulla kalagotla
+16.5087573,80.6185089,vijayawada,Positive,flipkart customer
+17.0050454,81.7804732,rajahmundry,Positive,phani kumar chunduri
+17.172918850000002,80.40575365751027,khammam district,Positive,konapakula vamsi
+17.282607900000002,73.4569787039826,ratnagiri,Positive,visharad borsutkar
+17.360589,78.4740613,hyderabad,Positive,"saif shaikh, flipkart customer, santosh c"
+17.4015785,75.7706451,karkal,Positive,vikram pai
+17.7231276,83.3012842,visakhapatnam,Positive,rajana shivaji
+17.8104908,83.37034229216232,madhurawada,Positive,"srikanth velamala, flipkart customer"
+18.0086617,76.0707924,tuljapur,Positive,pete shubha
+18.4045968,73.5041748,lavasa,Neutral,ranjaya sahoo
+18.4348122,79.1328042,karimnagar,Positive,gangadi sai prakash reddy
+18.5213738,73.8545071,pune,Positive,sharvil ghanekar
+19.08157715,72.88662753964906,mumbai,Positive,"akash khedekar, tajinder narang"
+19.1943294,72.9701779,thane,Positive,"sachin devkar, tanuja lovesh parmar, prahlad prajapati"
+20.0112475,73.7902364,nashik,Positive,sachin a nigudkar
+20.15,78.35,yavatmal,Positive,kranthikumar kinthali
+20.2602964,85.8394521,bhubaneswar,Positive,puspanjali mohanty
+20.29349915,76.4013845957059,loni,Positive,flipkart customer
+21.173694,72.958149,kadodara,Positive,deepu soni
+22.1911263,84.5867472,rajgangpur,Positive,kiran a
+22.2748109,79.72025222428486,seoni,Positive,ankush sanodiya
+22.3053263,70.8028377,rajkot,Positive,vishal limbasiya
+22.5726459,88.3638953,kolkata,Positive,"flipkart customer, dibyendu chakraborty, flipkart customer"
+22.6153934,70.9495617,wankaner,Positive,arpit sarvaiya
+22.8186031,88.3626129,garulia,Positive,shrestha chakraborty
+23.0215374,72.5800568,ahmedabad,Positive,"hardik sheth, dipen panara"
+23.3700501,85.3250387,ranchi,Positive,sourav das
+24.1763069,87.7859569,rampurhat,Positive,p mukherjee
+24.1985277,92.71606801518978,kolasib,Positive,mr rt pachuau
+24.786306,84.41448983395554,aurangabad,Positive,flipkart customer
+24.80332005,84.41101977690866,aurangabad,Positive,mangesh kulkarni
+25.0057449,88.1398483,malda,Positive,anupam roy
+25.132982,86.52484857739515,kharagpur,Positive,manvir singh
+25.529855,78.65278023546288,jhansi,Positive,anudeep singh yadav
+25.8348023,80.91545468512774,fatehpur,Positive,bihojit yeasin
+26.023639000000003,83.02931045602446,azamgarh district,Positive,nisarg shah
+26.1884479,88.1068693,kathalguri no 1,Positive,gibbs khungur
+26.25,81.25,rae bareli,Positive,shiv shanker
+26.5108262,93.9743686,golaghat,Positive,sumeet kundu
+27.7469713,77.49253145400397,chhata,Positive,vishnu sagar
+28.2039413,76.837441,bhiwadi,Positive,ajay singh
+28.3695198,77.59708927492271,gautam buddha nagar,Positive,vineet rawat
+28.5706333,77.3272147,noida,Positive,kamal adhikary
+28.6138954,77.2090057,new delhi,Neutral,shubham sharma
+28.6138954,77.2090057,new delhi,Positive,akshay
+29.080640950000003,75.788754109493,hisar,Neutral,jatin kaushik
+30.789406999999997,75.82697237096326,ludhiana,Positive,flipkart harjit singh
+30.9090157,75.851601,ludhiana,Positive,hardeep singh
+39.6003856,77.2571513,faizabad,Positive,abhinav customer
+45.9383,3.2553,surat,Positive,flipkart customer

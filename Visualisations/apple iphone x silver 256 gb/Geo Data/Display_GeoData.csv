@@ -1,0 +1,33 @@
+Latitude,Longitude,Display_Reviewer_Location,Sentiment,Display_Reviewer_Name
+12.9767936,77.590082,bengaluru,Negative,anshul aman
+12.9767936,77.590082,bengaluru,Positive,"p vamshi krishna, manoj navada, pavithra papanna"
+12.98815675,77.62260003796,bangalore,Negative,praveen subramaniyan
+12.98815675,77.62260003796,bangalore,Neutral,vinod mankar
+12.98815675,77.62260003796,bangalore,Positive,dilip gowda
+13.0836939,80.270186,chennai,Positive,samuel paul
+15.3707296,75.13328673460543,dharwad,Positive,yash sakaria
+15.8572666,74.5069343,belgaum,Positive,haseem beediwale
+18.5213738,73.8545071,pune,Negative,flipkart customer
+18.5213738,73.8545071,pune,Positive,"prashant gupta, ajinkya jain, akshay khare, pallavi divekar"
+18.6279288,73.8009829,pimpri chinchwad,Positive,rakesh soni
+19.0308262,73.0198537,navi mumbai,Positive,ravi sharma
+19.0785451,72.878176,mumbai,Negative,vinayak rane
+19.0785451,72.878176,mumbai,Neutral,flipkart customer
+19.0785451,72.878176,mumbai,Positive,"dr sunny chatwani, mohit srivastava"
+19.7984865,72.761452,boisar,Positive,chinmay nayak
+20.17822305,85.70930157008985,jatani,Positive,prasanta kumar mishra
+20.2602964,85.8394521,bhubaneswar,Positive,sourav kumar
+21.2120677,81.3732849,bhilai,Positive,aman panda
+23.3700501,85.3250387,ranchi,Positive,pragnesh pandey
+25.7215853,85.2549691837086,hajipur,Positive,nitesh singh
+26.2037247,78.1573628,gwalior,Positive,sooraj pratap
+28.45823445,79.40474517998476,bareilly,Positive,ayush agrawal
+28.4646148,77.0299194,gurugram,Neutral,rijul sharma
+28.5706333,77.3272147,noida,Positive,"udit das, fahad mahmood"
+28.6138954,77.2090057,new delhi,Neutral,mohit dalal
+28.6138954,77.2090057,new delhi,Positive,kartik dedha
+29.3912753,76.9771675,panipat,Positive,chankel pasricha
+30.6557257,76.8200648,zirakpur,Positive,anish rana
+30.7334421,76.7797143,chandigarh,Positive,rakesh kumar sharma
+30.9090157,75.851601,ludhiana,Positive,flipkart customer
+55.9554575,-3.1989995,new town,Positive,flipkart customer
