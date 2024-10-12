@@ -56,6 +56,9 @@ If the ChromeDriver is not compatible with your Chrome browser, the web scraping
 
 To check your Chrome version, open Chrome and go to `chrome://settings/help`. Then, download the appropriate version of ChromeDriver from the [ChromeDriver download page](https://chromedriver.chromium.org/downloads).
 
+### Important Note:
+If you download a new ChromeDriver, you need to manually place the `chromedriver.exe` file in the `chromedriver` directory of your project structure as shown below.
+
 **Note:** All other visualizations and functionalities of the application will work as expected, regardless of the ChromeDriver configuration.
 
 
