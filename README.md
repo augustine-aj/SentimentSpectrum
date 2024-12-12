@@ -3,6 +3,10 @@
 
 SentimentSpectrum is a web application designed by usiing **Flask framework** to predict customer sentiment for eCommerce websites like Flipkart using a BERT-based pre-trained model. This application offers real-time sentiment analysis with labels such as Positive, Negative, and Neutral, providing valuable insights into customer feedback. The project is built using the **Flask framework** and integrates various tools for data collection, processing, visualization, and machine learning, making it ideal for applications in data science, machine learning (ML), and artificial intelligence (AI).
 
+## Project architecture
+
+![Project architecture](Documents/sentimentspectrum.png)
+
 ## 🚀 Key Features
 
 ### Real-Time Data Collection and Processing
