@@ -7,6 +7,7 @@ SentimentSpectrum is a web application designed by usiing **Flask framework** to
 
 ![Project architecture](Documents/sentimentspectrum.png)
 
+
 ## 🚀 Key Features
 
 ### Real-Time Data Collection and Processing
